@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phố Lắc Lư – Scene V3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scene_id",
+    "story_id",
+    "duration_sec",
+    "character_ids",
+    "expression_id",
+    "motion_id",
+    "start_state",
+    "end_state",
+    "prompt",
+    "status"
+  ],
+  "properties": {
+    "scene_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "story_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "duration_sec": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 15
+    },
+    "character_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^PL\\d{3}$"
+      },
+      "minItems": 1,
+      "maxItems": 4
+    },
+    "expression_id": {
+      "type": "string",
+      "pattern": "^EX\\d{2}$"
+    },
+    "motion_id": {
+      "type": "string",
+      "pattern": "^MV\\d{3}$"
+    },
+    "start_state": {
+      "type": "string",
+      "minLength": 1
+    },
+    "end_state": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 30
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "READY_FOR_REVIEW",
+        "APPROVED",
+        "BLOCKED"
+      ]
+    }
+  }
+}

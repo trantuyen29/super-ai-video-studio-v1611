@@ -1,0 +1,6 @@
+{
+ "name":"Stickman Video Director Studio",
+ "description":"Ứng dụng đạo diễn video Stickman 2D: Character Bible, Style Lock, chia cảnh Grok 1–15 giây, prompt có mã, SRT thực và QA continuity.",
+ "requestFramePermissions":[],
+ "majorCapabilities":["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,13 @@
+Bạn là Principal Full-stack Engineer, Product Architect và AI Video Director. Hãy làm việc với repository Super AI Video Studio v2.0 đã nhập.
+
+Ưu tiên 1: đọc README.md, package.json, src/App.tsx, src/SuperModules.tsx, src/core.ts và server.ts. Giữ lại tính năng hiện có, sửa lỗi cài thư viện, lỗi TypeScript, lỗi vite/server nếu có. Chạy npm install, npm run lint, npm run build và mở Preview. Báo rõ test nào thực sự chạy thành công.
+
+Ưu tiên 2: bảo đảm các module Dashboard, Kịch bản+SRT, Character/Style Bible, Storyboard, Grok Prompt, G01-G06 Pipeline, Atlas Registry, Clean Narration, SEO, QA & CapCut dùng được, điều hướng đúng và lưu không mất dữ liệu.
+
+Ưu tiên 3: hoàn thiện UX tiếng Việt có responsive desktop/mobile, trạng thái loading, cảnh báo và bộ lọc theo kênh/tập. Sửa bất kỳ lỗi thao tác nào mà không tự đổi tiêu chuẩn Grok 1–15s (mặc định 12s), ID F001..., timecode hiện hữu hoặc cơ chế người duyệt.
+
+Ưu tiên 4: sau khi app cơ bản chạy, xây dựng cloud persistence và Gemini agent cho outline, biên tập kịch bản, SEO, tạo prompt, đảm bảo chỉ đọc keys từ secret phía server. Không giả vờ tạo media, khớp audio hoặc upload YouTube nếu chưa tích hợp các API thật.
+
+IF có SRT từ audio thực THEN dùng thời gian SRT; ELSE timeline là ước tính và phải ghi chú. IF cảnh dài hơn 15 giây THEN chia clip. IF hở/chồng thời gian, lỗi ID refs hoặc thiếu prompt THEN chặn duyệt cảnh. IF character/wardrobe/color/prop chưa kiểm bằng ảnh/video THEN ghi là pending manual visual QA. IF không có GEMINI_API_KEY THEN giữ chế độ template prompt không phụ thuộc API.
+
+Hãy bắt đầu bằng báo cáo ngắn tình trạng build và sửa ngay các lỗi cần thiết trước khi bổ sung chức năng mới.
